@@ -1,0 +1,240 @@
+{
+  "android_play_store_link": "https://play.google.com/store/apps/details?id=com.wastickerapps.bollywoodstickers",
+  "ios_app_store_link": "",
+  "sticker_packs": [
+    {
+      "identifier": "filmy_baatein_pack",
+      "name": "Filmy Baatein",
+      "publisher": "The Captain Flint",
+      "tray_image_file": "icon.png",
+      "publisher_email":"",
+      "publisher_website": "https://www.bobble.ai/stickerstore",
+      "privacy_policy_website": "http://gifstickerandmeme.com/privacy-policy.html",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "1.webp"
+        },
+        {
+          "image_file": "2.webp"
+        },
+        {
+          "image_file": "3.webp"
+        },
+        {
+          "image_file": "4.webp"
+        },
+        {
+          "image_file": "5.webp"
+        },
+        {
+          "image_file": "6.webp"
+        },
+        {
+          "image_file": "7.webp"
+        },
+        {
+          "image_file": "8.webp"
+        },
+        {
+          "image_file": "9.webp"
+        },
+        {
+          "image_file": "bobble_sticker.webp"
+        }
+      ]
+    },
+    {
+      "identifier": "gangs_of_wasseypur_pack",
+      "name": "Gangs of Wasseypur",
+      "publisher": "The Captain Flint",
+      "tray_image_file": "icon.png",
+      "publisher_email":"",
+      "publisher_website": "https://www.bobble.ai/stickerstore",
+      "privacy_policy_website": "http://gifstickerandmeme.com/privacy-policy.html",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "1.webp"
+        },
+        {
+          "image_file": "2.webp"
+        },
+        {
+          "image_file": "3.webp"
+        },
+        {
+          "image_file": "4.webp"
+        },
+        {
+          "image_file": "5.webp"
+        },
+        {
+          "image_file": "6.webp"
+        },
+        {
+          "image_file": "7.webp"
+        },
+        {
+          "image_file": "8.webp"
+        },
+        {
+          "image_file": "9.webp"
+        },
+        {
+          "image_file": "10.webp"
+        },
+        {
+          "image_file": "bobble_sticker.webp"
+        }
+      ]
+    },
+    {
+      "identifier": "nana_se_no_panga_pack",
+      "name": "Nana se no panga",
+      "publisher": "The Captain Flint",
+      "tray_image_file": "icon.png",
+      "publisher_email":"",
+      "publisher_website": "https://www.bobble.ai/stickerstore",
+      "privacy_policy_website": "http://gifstickerandmeme.com/privacy-policy.html",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "1.webp"
+        },
+        {
+          "image_file": "2.webp"
+        },
+        {
+          "image_file": "3.webp"
+        },
+        {
+          "image_file": "4.webp"
+        },
+        {
+          "image_file": "5.webp"
+        },
+        {
+          "image_file": "6.webp"
+        },
+        {
+          "image_file": "7.webp"
+        },
+        {
+          "image_file": "8.webp"
+        },
+        {
+          "image_file": "9.webp"
+        },
+        {
+          "image_file": "10.webp"
+        },
+        {
+          "image_file": "11.webp"
+        },
+        {
+          "image_file": "12.webp"
+        },
+        {
+          "image_file": "bobble_sticker.webp"
+        }
+      ]
+    },
+    {
+      "identifier": "super_villains_pack",
+      "name": "Super Villains",
+      "publisher": "The Captain Flint",
+      "tray_image_file": "icon.png",
+      "publisher_email":"",
+      "publisher_website": "https://www.bobble.ai/stickerstore",
+      "privacy_policy_website": "http://gifstickerandmeme.com/privacy-policy.html",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "1.webp"
+        },
+        {
+          "image_file": "2.webp"
+        },
+        {
+          "image_file": "3.webp"
+        },
+        {
+          "image_file": "4.webp"
+        },
+        {
+          "image_file": "5.webp"
+        },
+        {
+          "image_file": "6.webp"
+        },
+        {
+          "image_file": "7.webp"
+        },
+        {
+          "image_file": "8.webp"
+        },
+        {
+          "image_file": "9.webp"
+        },
+        {
+          "image_file": "10.webp"
+        },
+        {
+          "image_file": "bobble_sticker.webp"
+        }
+      ]
+    },
+    {
+      "identifier": "we_love_sallu_bhai_pack",
+      "name": "We love Sallu Bhai",
+      "publisher": "The Captain Flint",
+      "tray_image_file": "icon.png",
+      "publisher_email":"",
+      "publisher_website": "https://www.bobble.ai/stickerstore",
+      "privacy_policy_website": "http://gifstickerandmeme.com/privacy-policy.html",
+      "license_agreement_website": "",
+      "stickers": [
+        {
+          "image_file": "1.webp"
+        },
+        {
+          "image_file": "2.webp"
+        },
+        {
+          "image_file": "3.webp"
+        },
+        {
+          "image_file": "4.webp"
+        },
+        {
+          "image_file": "5.webp"
+        },
+        {
+          "image_file": "6.webp"
+        },
+        {
+          "image_file": "7.webp"
+        },
+        {
+          "image_file": "8.webp"
+        },
+        {
+          "image_file": "9.webp"
+        },
+        {
+          "image_file": "10.webp"
+        },
+        {
+          "image_file": "11.webp"
+        },
+        {
+          "image_file": "12.webp"
+        },
+        {
+          "image_file": "bobble_sticker.webp"
+        }
+      ]
+    }
+  ]
+}
