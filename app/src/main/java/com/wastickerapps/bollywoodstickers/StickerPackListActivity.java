@@ -24,6 +24,7 @@ import android.widget.LinearLayout;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 
 import java.lang.ref.WeakReference;
@@ -55,6 +56,9 @@ public class StickerPackListActivity extends AddStickerPackActivity {
     //private NativeAdLayout nativeAdLayout;
 
     //private InterstitialAd interstitialAd;
+
+    //Admob
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,7 +142,7 @@ public class StickerPackListActivity extends AddStickerPackActivity {
     }
 
     private void admobAdsCode() {
-
+        //Banner Ad Start
         MobileAds.initialize(this, getResources().getString(R.string.admob_app_id));
         AdView adView = new AdView(this);
         adView.setAdSize(AdSize.SMART_BANNER);
@@ -147,6 +151,13 @@ public class StickerPackListActivity extends AddStickerPackActivity {
         AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        //Banner Ad End
+
+        //Interstitial Ad Start
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getResources().getString(R.string.admob_interstitial_ad_id));
+        mInterstitialAd.loadAd(adRequest);
+        //Interstitial Ad End
     }
 
     @Override
@@ -168,6 +179,9 @@ public class StickerPackListActivity extends AddStickerPackActivity {
                 /*if (interstitialAd.isAdLoaded()) {
                     interstitialAd.show();
                 }*/
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                }
                 finish();
             }
         });

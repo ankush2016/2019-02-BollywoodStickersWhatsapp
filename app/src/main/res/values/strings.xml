@@ -30,7 +30,7 @@
     <!--<string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>-->
     <string name="admob_app_id">ca-app-pub-4759255989930149~5537063609</string>
     <string name="admob_banner_ad_id">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="admob_interstitial_ad_id"></string>
+    <string name="admob_interstitial_ad_id">ca-app-pub-3940256099942544/1033173712</string>
     
     <string name="share_app_text">Get Free Bollywood Funny Stickers for WhatsApp.\n\n</string>
 </resources>
