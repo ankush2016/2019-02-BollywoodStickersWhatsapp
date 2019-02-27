@@ -11,13 +11,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.wastickerapps.bollywoodstickers.R;
-import com.facebook.ads.Ad;
+/*import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdIconView;
 import com.facebook.ads.AdOptionsView;
 import com.facebook.ads.NativeAdLayout;
 import com.facebook.ads.NativeAdListener;
-import com.facebook.ads.NativeBannerAd;
+import com.facebook.ads.NativeBannerAd;*/
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,15 +25,15 @@ import java.util.List;
 public class NativeBannerAdFb extends AppCompatActivity {
 
     private final String TAG = NativeBannerAdFb.class.getSimpleName();
-    private NativeBannerAd nativeBannerAd;
+    //private NativeBannerAd nativeBannerAd;
     private LinearLayout adView;
-    private NativeAdLayout nativeAdLayout;
+    //private NativeAdLayout nativeAdLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_native_banner_ad_fb);
-        nativeBannerAd = new NativeBannerAd(this, getResources().getString(R.string.fb_native_banner_ads_app_id));
+        /*nativeBannerAd = new NativeBannerAd(this, getResources().getString(R.string.fb_native_banner_ads_app_id));
         nativeBannerAd.setAdListener(new NativeAdListener() {
             @Override
             public void onMediaDownloaded(Ad ad) {
@@ -71,10 +71,10 @@ public class NativeBannerAdFb extends AppCompatActivity {
             }
         });
         // load the ad
-        nativeBannerAd.loadAd();
+        nativeBannerAd.loadAd();*/
     }
 
-    private void inflateAd(NativeBannerAd nativeBannerAd) {
+    /*private void inflateAd(NativeBannerAd nativeBannerAd) {
         // Unregister last ad
         nativeBannerAd.unregisterView();
 
@@ -111,5 +111,5 @@ public class NativeBannerAdFb extends AppCompatActivity {
         clickableViews.add(nativeAdTitle);
         clickableViews.add(nativeAdCallToAction);
         nativeBannerAd.registerViewForInteraction(adView, nativeAdIconView, clickableViews);
-    }
+    }*/
 }

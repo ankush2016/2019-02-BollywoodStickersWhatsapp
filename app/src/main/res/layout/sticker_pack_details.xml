@@ -67,7 +67,7 @@
 
     </android.support.constraint.ConstraintLayout>
 
-    <RelativeLayout
+    <!--<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -75,7 +75,18 @@
             android:id="@+id/native_banner_ad_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-    </RelativeLayout>
+    </RelativeLayout>-->
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/admob_banner_ad_id">
+    </com.google.android.gms.ads.AdView>
 
     <FrameLayout
         android:layout_width="match_parent"

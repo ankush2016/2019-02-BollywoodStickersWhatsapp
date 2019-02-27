@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.wastickerapps.bollywoodstickers.R;
-import com.facebook.ads.Ad;
+/*import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdIconView;
 import com.facebook.ads.AdOptionsView;
@@ -20,7 +20,7 @@ import com.facebook.ads.AudienceNetworkAds;
 import com.facebook.ads.MediaView;
 import com.facebook.ads.NativeAd;
 import com.facebook.ads.NativeAdLayout;
-import com.facebook.ads.NativeAdListener;
+import com.facebook.ads.NativeAdListener;*/
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,9 +28,9 @@ import java.util.List;
 public class FbAdsTest extends AppCompatActivity {
 
     private final String TAG = FbAdsTest.class.getSimpleName();
-    private NativeAdLayout nativeAdLayout;
+    /*private NativeAdLayout nativeAdLayout;
     private LinearLayout adView;
-    private NativeAd nativeAd;
+    private NativeAd nativeAd;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +40,11 @@ public class FbAdsTest extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // Initialize the Audience Network SDK
-        AudienceNetworkAds.initialize(this);
-        loadNativeAd();
+        //AudienceNetworkAds.initialize(this);
+        //loadNativeAd();
     }
 
-    private void loadNativeAd() {
+    /*private void loadNativeAd() {
         // Instantiate a NativeAd object.
         // NOTE: the placement ID will eventually identify this as your App, you can ignore it for
         // now, while you are testing and replace it later when you have signed up.
@@ -96,9 +96,9 @@ public class FbAdsTest extends AppCompatActivity {
 
         // Request an ad
         nativeAd.loadAd();
-    }
+    }*/
 
-    private void inflateAd(NativeAd nativeAd) {
+    /*private void inflateAd(NativeAd nativeAd) {
 
         nativeAd.unregisterView();
 
@@ -143,6 +143,6 @@ public class FbAdsTest extends AppCompatActivity {
                 nativeAdMedia,
                 nativeAdIcon,
                 clickableViews);
-    }
+    }*/
 
 }

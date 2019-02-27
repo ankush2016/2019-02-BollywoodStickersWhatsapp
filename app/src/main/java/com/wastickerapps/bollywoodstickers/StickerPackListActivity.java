@@ -17,28 +17,28 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-import com.facebook.ads.Ad;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+/*import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdIconView;
 import com.facebook.ads.AdOptionsView;
 import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.NativeAdLayout;
 import com.facebook.ads.NativeAdListener;
-import com.facebook.ads.NativeBannerAd;
-
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import com.facebook.ads.NativeBannerAd;*/
 
 
 public class StickerPackListActivity extends AddStickerPackActivity {
@@ -50,11 +50,11 @@ public class StickerPackListActivity extends AddStickerPackActivity {
     private WhiteListCheckAsyncTask whiteListCheckAsyncTask;
     private ArrayList<StickerPack> stickerPackList;
 
-    private NativeBannerAd nativeBannerAd;
+    //private NativeBannerAd nativeBannerAd;
     private LinearLayout adView;
-    private NativeAdLayout nativeAdLayout;
+    //private NativeAdLayout nativeAdLayout;
 
-    private InterstitialAd interstitialAd;
+    //private InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +64,9 @@ public class StickerPackListActivity extends AddStickerPackActivity {
         stickerPackList = getIntent().getParcelableArrayListExtra(EXTRA_STICKER_PACK_LIST_DATA);
         showStickerPackList(stickerPackList);
 
-        nativeBannerAd = new NativeBannerAd(this, getResources().getString(R.string.fb_native_banner_ads_app_id));
+        admobAdsCode();
+
+        /*nativeBannerAd = new NativeBannerAd(this, getResources().getString(R.string.fb_native_banner_ads_app_id));
         nativeBannerAd.setAdListener(new NativeAdListener() {
             @Override
             public void onMediaDownloaded(Ad ad) {
@@ -99,7 +101,7 @@ public class StickerPackListActivity extends AddStickerPackActivity {
         nativeBannerAd.loadAd();
 
         interstitialAd = new InterstitialAd(this, getResources().getString(R.string.fb_interstitial_ads_app_id));
-        interstitialAd.loadAd();
+        interstitialAd.loadAd();*/
         /*interstitialAd.setAdListener(new InterstitialAdListener() {
             @Override
             public void onInterstitialDisplayed(Ad ad) {
@@ -135,6 +137,18 @@ public class StickerPackListActivity extends AddStickerPackActivity {
         });*/
     }
 
+    private void admobAdsCode() {
+
+        MobileAds.initialize(this, getResources().getString(R.string.admob_app_id));
+        AdView adView = new AdView(this);
+        adView.setAdSize(AdSize.SMART_BANNER);
+        adView.setAdUnitId(getResources().getString(R.string.admob_banner_ad_id));
+
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+    }
+
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
@@ -151,9 +165,9 @@ public class StickerPackListActivity extends AddStickerPackActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 // TODO Auto-generated method stub
-                if (interstitialAd.isAdLoaded()) {
+                /*if (interstitialAd.isAdLoaded()) {
                     interstitialAd.show();
-                }
+                }*/
                 finish();
             }
         });
@@ -191,7 +205,7 @@ public class StickerPackListActivity extends AddStickerPackActivity {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
                 String link = "https://play.google.com/store/apps/details?id=" + getPackageName();
-                String message = "Get Free Bollywood Funny Stickers for WhatsApp.\n\n" + link;
+                String message = getResources().getString(R.string.share_app_text) + link;
                 intent.putExtra(Intent.EXTRA_TEXT, message);
                 startActivity(Intent.createChooser(intent, "Share App"));
             } catch (Exception e) {
@@ -201,7 +215,7 @@ public class StickerPackListActivity extends AddStickerPackActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void inflateAd(NativeBannerAd nativeBannerAd) {
+    /*private void inflateAd(NativeBannerAd nativeBannerAd) {
         // Unregister last ad
         nativeBannerAd.unregisterView();
 
@@ -238,7 +252,7 @@ public class StickerPackListActivity extends AddStickerPackActivity {
         clickableViews.add(nativeAdTitle);
         clickableViews.add(nativeAdCallToAction);
         nativeBannerAd.registerViewForInteraction(adView, nativeAdIconView, clickableViews);
-    }
+    }*/
 
     @Override
     protected void onResume() {

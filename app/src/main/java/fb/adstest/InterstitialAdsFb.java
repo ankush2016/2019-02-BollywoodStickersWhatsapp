@@ -6,14 +6,14 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.wastickerapps.bollywoodstickers.R;
-import com.facebook.ads.Ad;
+/*import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.InterstitialAd;
-import com.facebook.ads.InterstitialAdListener;
+import com.facebook.ads.InterstitialAdListener;*/
 
 public class InterstitialAdsFb extends AppCompatActivity {
 
-    private InterstitialAd interstitialAd;
+    //private InterstitialAd interstitialAd;
     private Button bShowAd;
 
     @Override
@@ -21,9 +21,9 @@ public class InterstitialAdsFb extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interstitial_ads_fb);
         bShowAd = findViewById(R.id.b_fb_interstitial);
-        interstitialAd = new InterstitialAd(this, getResources().getString(R.string.fb_interstitial_ads_app_id));
+        //interstitialAd = new InterstitialAd(this, getResources().getString(R.string.fb_interstitial_ads_app_id));
 
-        interstitialAd.setAdListener(new InterstitialAdListener() {
+        /*interstitialAd.setAdListener(new InterstitialAdListener() {
             @Override
             public void onInterstitialDisplayed(Ad ad) {
                 // Interstitial ad displayed callback
@@ -74,6 +74,6 @@ public class InterstitialAdsFb extends AppCompatActivity {
             } else {
                 interstitialAd.loadAd();
             }
-        });
+        });*/
     }
 }

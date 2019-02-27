@@ -28,7 +28,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.facebook.ads.Ad;
+/*import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdIconView;
 import com.facebook.ads.AdOptionsView;
@@ -36,7 +36,12 @@ import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.InterstitialAdListener;
 import com.facebook.ads.NativeAdLayout;
 import com.facebook.ads.NativeAdListener;
-import com.facebook.ads.NativeBannerAd;
+import com.facebook.ads.NativeBannerAd;*/
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -68,11 +73,11 @@ public class StickerPackDetailsActivity extends AddStickerPackActivity {
     private View divider;
     private WhiteListCheckAsyncTask whiteListCheckAsyncTask;
 
-    private NativeBannerAd nativeBannerAd;
+    //private NativeBannerAd nativeBannerAd;
     private LinearLayout adView;
-    private NativeAdLayout nativeAdLayout;
+    //private NativeAdLayout nativeAdLayout;
 
-    private InterstitialAd interstitialAd;
+    //private InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,7 +112,9 @@ public class StickerPackDetailsActivity extends AddStickerPackActivity {
             getSupportActionBar().setTitle(showUpButton ? R.string.title_activity_sticker_pack_details_multiple_pack : R.string.title_activity_sticker_pack_details_single_pack);
         }
 
-        nativeBannerAd = new NativeBannerAd(this, getResources().getString(R.string.fb_native_banner_ads_app_id));
+        admobAdsCode();
+
+        /*nativeBannerAd = new NativeBannerAd(this, getResources().getString(R.string.fb_native_banner_ads_app_id));
         nativeBannerAd.setAdListener(new NativeAdListener() {
             @Override
             public void onMediaDownloaded(Ad ad) {
@@ -181,14 +188,14 @@ public class StickerPackDetailsActivity extends AddStickerPackActivity {
             public void onLoggingImpression(Ad ad) {
                 // Ad impression logged callback
             }
-        });
+        });*/
 
         // For auto play video ads, it's recommended to load the ad
         // at least 30 seconds before it is shown
-        interstitialAd.loadAd();
+        //interstitialAd.loadAd();
     }
 
-    private void inflateAd(NativeBannerAd nativeBannerAd) {
+    /*private void inflateAd(NativeBannerAd nativeBannerAd) {
         // Unregister last ad
         nativeBannerAd.unregisterView();
 
@@ -225,6 +232,19 @@ public class StickerPackDetailsActivity extends AddStickerPackActivity {
         clickableViews.add(nativeAdTitle);
         clickableViews.add(nativeAdCallToAction);
         nativeBannerAd.registerViewForInteraction(adView, nativeAdIconView, clickableViews);
+    }*/
+
+
+    private void admobAdsCode() {
+
+        MobileAds.initialize(this, getResources().getString(R.string.admob_app_id));
+        AdView adView = new AdView(this);
+        adView.setAdSize(AdSize.SMART_BANNER);
+        adView.setAdUnitId(getResources().getString(R.string.admob_banner_ad_id));
+
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     private void launchInfoActivity(String publisherWebsite, String publisherEmail, String privacyPolicyWebsite, String trayIconUriString) {
@@ -351,8 +371,8 @@ public class StickerPackDetailsActivity extends AddStickerPackActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        if (interstitialAd.isAdLoaded()) {
+        /*if (interstitialAd.isAdLoaded()) {
             interstitialAd.show();
-        }
+        }*/
     }
 }

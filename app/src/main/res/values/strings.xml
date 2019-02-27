@@ -26,4 +26,11 @@
     <string name="fb_native_ads_app_id">2010359862344512_2010360259011139</string>
     <string name="fb_native_banner_ads_app_id">300170594035805_300170790702452</string>
     <string name="fb_interstitial_ads_app_id">300170594035805_300171637369034</string>
+    
+    <!--<string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>-->
+    <string name="admob_app_id">ca-app-pub-4759255989930149~5537063609</string>
+    <string name="admob_banner_ad_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_interstitial_ad_id"></string>
+    
+    <string name="share_app_text">Get Free Bollywood Funny Stickers for WhatsApp.\n\n</string>
 </resources>
