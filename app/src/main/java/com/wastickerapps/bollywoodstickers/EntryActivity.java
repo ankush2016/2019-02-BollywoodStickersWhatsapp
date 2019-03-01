@@ -17,8 +17,7 @@ import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 import android.widget.TextView;
-
-//import com.onesignal.OneSignal;
+import com.onesignal.OneSignal;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -39,10 +38,10 @@ public class EntryActivity extends BaseActivity {
         loadListAsyncTask = new LoadListAsyncTask(this);
         loadListAsyncTask.execute();
 
-        /*OneSignal.startInit(this)
+        OneSignal.startInit(this)
                 .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
                 .unsubscribeWhenNotificationsAreDisabled(true)
-                .init();*/
+                .init();
     }
 
     private void showStickerPack(ArrayList<StickerPack> stickerPackList) {
