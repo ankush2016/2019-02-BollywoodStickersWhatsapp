@@ -247,7 +247,7 @@ public class StickerPackDetailsActivity extends AddStickerPackActivity {
         adView.setAdUnitId(getResources().getString(R.string.admob_banner_ad_id));
 
         AdView mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice(getResources().getString(R.string.admob_test_device_id)).build();
         mAdView.loadAd(adRequest);
         //Banner Ad End
 
@@ -286,7 +286,6 @@ public class StickerPackDetailsActivity extends AddStickerPackActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 
 
     private final ViewTreeObserver.OnGlobalLayoutListener pageLayoutListener = new ViewTreeObserver.OnGlobalLayoutListener() {
