@@ -120,9 +120,9 @@ dependencies {
     implementation 'com.facebook.fresco:animated-webp:1.11.0'
     implementation 'com.onesignal:OneSignal:[3.10.6, 3.99.99]'
 
-    //implementation 'com.facebook.android:audience-network-sdk:5.+'
-    implementation 'com.google.android.gms:play-services-ads:17.1.3'
+    implementation 'com.facebook.android:audience-network-sdk:5.+'
+    /*implementation 'com.google.android.gms:play-services-ads:17.1.3'
     implementation 'com.google.android.gms:play-services-base:+'
     implementation 'com.google.android.gms:play-services-location:+'
-    implementation 'com.google.android.gms:play-services-maps:+'
+    implementation 'com.google.android.gms:play-services-maps:+'*/
 }
